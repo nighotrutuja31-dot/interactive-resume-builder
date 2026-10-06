@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Resume Builder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div>
+        <h1>Resume Builder</h1>
+        <p>Create your professional resume instantly</p>
+    </div>
+
+    <button class="print-btn" onclick="printResume()">
+        🖨 Print / Save PDF
+    </button>
+</header>
+
+<main class="container">
+
+    <!-- FORM SECTION -->
+    <section class="form-section">
+
+        <h2>Build Your Resume</h2>
+
+        <!-- PERSONAL INFORMATION -->
+        <div class="card">
+            <h3>👤 Personal Information</h3>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Full Name"
+            >
+
+            <input
+                type="text"
+                id="jobTitle"
+                placeholder="Job Title"
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+            >
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Location"
+            >
+
+            <input
+                type="text"
+                id="linkedin"
+                placeholder="LinkedIn Profile"
+            >
+
+            <input
+                type="text"
+                id="github"
+                placeholder="GitHub Profile"
+            >
+
+            <textarea
+                id="summary"
+                placeholder="Professional Summary"
+            ></textarea>
+        </div>
+
+
+        <!-- EDUCATION -->
+        <div class="card">
+
+            <div class="section-title">
+                <h3>🎓 Education</h3>
+
+                <button
+                    class="add-btn"
+                    onclick="addEducation()">
+                    + Add
+                </button>
+            </div>
+
+            <div id="educationContainer"></div>
+
+        </div>
+
+
+        <!-- EXPERIENCE -->
+        <div class="card">
+
+            <div class="section-title">
+                <h3>💼 Experience</h3>
+
+                <button
+                    class="add-btn"
+                    onclick="addExperience()">
+                    + Add
+                </button>
+            </div>
+
+            <div id="experienceContainer"></div>
+
+        </div>
+
+        <!-- SKILLS -->
+        <div class="card">
+
+            <h3>🛠 Skills</h3>
+
+            <input
+                type="text"
+                id="skills"
+                placeholder="Example: HTML, CSS, JavaScript, Python"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- PREVIEW SECTION -->
+    <section class="preview-section">
+
+        <div class="preview-header">
+            <h2>Live Preview</h2>
+            <span>● Live</span>
+        </div>
+
+        <div id="resumePreview" class="resume">
+
+            <div class="resume-top">
+
+                <h1 id="previewName">
+                    Your Name
+                </h1>
+
+                <h2 id="previewJob">
+                    Your Job Title
+                </h2>
+
+                <p id="previewContact">
+                    email@example.com | +91 XXXXX XXXXX
+                </p>
+
+                <p id="previewLinks"></p>
+
+            </div>
+
+
+            <div class="resume-content">
+
+                <div class="resume-block">
+
+                    <h3>PROFILE</h3>
+
+                    <p id="previewSummary">
+                        Your professional summary will appear here.
+                    </p>
+
+                </div>
+
+
+                <div class="resume-block">
+
+                    <h3>EDUCATION</h3>
+
+                    <div id="previewEducation">
+                        <p>No education added yet.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="resume-block">
+
+                    <h3>EXPERIENCE</h3>
+
+                    <div id="previewExperience">
+                        <p>No experience added yet.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="resume-block">
+
+                    <h3>SKILLS</h3>
+
+                    <div
+                        id="previewSkills"
+                        class="skills-list">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
